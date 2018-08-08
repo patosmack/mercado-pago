@@ -37,11 +37,6 @@ class MP {
             $this->client_secret = func_get_arg(1);
         }
 
-        if ($i == 3) {
-            $this->client_id = func_get_arg(0);
-            $this->client_secret = func_get_arg(1);
-            $this->sandbox_mode(func_get_arg(2));
-        }
     }
 
     public function sandbox_mode($enable = NULL) {
@@ -112,12 +107,16 @@ class MP {
      * @return array(json)
      */
     public function get_merchant_order($id) {
-        $access_token = $this->get_access_token();
-
         $uri_prefix = $this->sandbox ? "/sandbox" : "";
 
-        $payment_info = MPRestClient::get("/merchant_orders/" . $id . "?access_token=" . $access_token);
-        return $payment_info;
+        $request = array(
+            "uri" => $uri_prefix."/merchant_orders/{$id}",
+            "params" => array(
+                "access_token" => $this->get_access_token()
+            )
+        );
+        $merchant_order = MPRestClient::get($request);
+        return $merchant_order;
     }
 
     public function get_merchant_order_info($id) {

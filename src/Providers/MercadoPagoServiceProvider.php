@@ -14,7 +14,6 @@ class MercadoPagoServiceProvider extends ServiceProvider
 	{
         $this->mp_app_id     = env('MP_APP_ID', '');
         $this->mp_app_secret = env('MP_APP_SECRET', '');
-        $this->mp_app_sandbox = env('MP_APP_SANDBOX', true);
 
 	}
 
