@@ -36,6 +36,12 @@ class MP {
             $this->client_id = func_get_arg(0);
             $this->client_secret = func_get_arg(1);
         }
+
+        if ($i == 3) {
+            $this->client_id = func_get_arg(0);
+            $this->client_secret = func_get_arg(1);
+            $this->sandbox_mode(func_get_arg(2));
+        }
     }
 
     public function sandbox_mode($enable = NULL) {
