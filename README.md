@@ -59,7 +59,7 @@ return [
 ```
 
 Se recomienda utilizar el App ID y el App Secret desde el archivo .env
-Configurar las variables  `MP_APP_ID` y `MP_APP_SECRET` con los datos de tu cuenta de Mercadopago
+Configurar las variables  `MP_APP_ID`,  `MP_APP_SECRET` y `MP_APP_SANDBOX` con los datos de tu cuenta de Mercadopago
 
 <a name="how-to"></a>
 ### Como usar
