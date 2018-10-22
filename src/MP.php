@@ -485,7 +485,7 @@ class MPRestClient {
         curl_setopt($connect, CURLOPT_USERAGENT, "MercadoPago PHP SDK v" . MP::version);
         curl_setopt($connect, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($connect, CURLOPT_SSL_VERIFYPEER, true);
-        curl_setopt($connect, CURLOPT_CAINFO, base_path() . "/vendor/patosmack/src/cacert.pem");
+        curl_setopt($connect, CURLOPT_CAINFO, base_path() . "/vendor/patosmack/mercado-pago/src/cacert.pem");
         curl_setopt($connect, CURLOPT_CUSTOMREQUEST, $request["method"]);
         curl_setopt($connect, CURLOPT_HTTPHEADER, $headers);
 
