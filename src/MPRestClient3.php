@@ -5,7 +5,7 @@ use MercadoPagoException;
 /**
  * MercadoPago cURL RestClient
  */
-class MPRestClient {
+class MPRestClient2 {
 
     const API_BASE_URL = "https://api.mercadopago.com";
 
